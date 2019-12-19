@@ -1,0 +1,23 @@
+
+{% block register %}
+  <div class="register-box">
+        <h1>Nouveau ... </h1>
+      <form method="post" action="/auth/register/">
+          {% csrf_token %}
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="exemple@mail.com" name="email" value="" >
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="votre mot de passe" name="password" value="" >
+            <input type="password" placeholder="confirmez votre mot de passe" name="password" value="" >
+
+        </div>
+
+        <input type="submit" class="button is-primary is-inverted is-outlined "  >
+    </form>
+
+
+  </div>
+{% endblock register%}

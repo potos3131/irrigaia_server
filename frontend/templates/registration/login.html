@@ -1,0 +1,23 @@
+{% block login %}
+
+  <div class="login-box">
+        <h1>Se connecter</h1>
+      <form method="post" action="/account/login/">
+          {% csrf_token %}
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="example@mail.com" name="email" value="" >
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="your password" name="password" value="" >
+        </div>
+
+        <input type="submit" class="button is-primary is-inverted is-outlined "  >
+    </form>
+
+        <h2> J'ai oublié mes identifiants ... </h2>
+
+  </div>
+<!-- todo : arrondir le texbox comme pour netflix . chercher dans le spy chrome css-->
+{% endblock login%}

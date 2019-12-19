@@ -1,0 +1,15 @@
+<h1 class="title is-4">Bienvenue {{ user.first_name }} ,</h1>
+
+ {% if request.get_full_path == "/dashboard/" or request.get_full_path == "/"%}
+          {% include './userdashboard.html' %}
+ {% endif %}
+
+ {% if request.get_full_path == "/settings/" %}
+         {% include './usersettings.html' %}
+{% endif %}
+
+
+
+
+
+

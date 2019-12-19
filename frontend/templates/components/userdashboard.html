@@ -1,0 +1,44 @@
+<div class="columns">
+  <div class="column is-one-fifth">
+   <aside class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a href="{% url 'dashboard' %}"  class="is-active" ><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+      <li><a><i class="fas fa-envelope"></i> Messages <strong>(2)</strong></a></li>
+ <li>
+
+     <a id ="settings" href="{% url 'settings' %}"  ><i class="fas fa-cogs"></i> Mes paramètres</a></li>
+
+  </ul>
+  <p class="menu-label">
+      AgriData
+  </p>
+  <p class="menu-label">
+      {{ api.user_profile.bio  }}
+  </p>
+
+  <ul class="menu-list">
+    <li>
+      <a> Gérer mes Parcelles</a>
+      <ul>
+      <li><a><i class="fas fa-plus-circle"></i> Créer une Parcelle</a></li>
+      </ul>
+    </li>
+    <li><a><i class="fas fa-cloud"></i> Météo agricole</a></li>
+    <li><a><i class="fas fa-life-ring"></i> Contact Support</a></li>
+  </ul>
+
+       <p class="menu-label">
+     <a href="{% url 'logout' %}?next=/" ><i class="fas fa-sign-out-alt"></i>   <strong>se déconnecter</strong> </a>
+</p>
+</aside>
+  </div>
+
+  <div class="column">
+dashboard
+
+  </div>
+
+</div>

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "meteo60",
+    "urlbase": "https://www.meteo60.fr/",
+    "urlAgri": "https://www.meteo60.fr/previsions-meteo-agricole-@@CITY@@.html",
+    "temp_min": "rules",
+    "temp_max": "rules",
+    "temp_avg": "rules",
+    "wind_speed_avg" : "rules",
+    "humidity": "rules",
+    "atm_pressure": "rules",
+    "precipitation": "rules",
+      },
+
+  {"name": "meteo60",
+  "url": "meteo.com"}
+]

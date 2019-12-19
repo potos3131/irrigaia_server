@@ -1,0 +1,23 @@
+https://simpleisbetterthancomplex.com/tutorial/2018/11/22/how-to-implement-token-authentication-using-django-rest-framework.html
+https://chrisbartos.com/articles/how-to-implement-token-authentication-with-django-rest-framework/
+Tracking file by folder pattern:  migrations
+Generated token a8cc8bf1f4901f5eb8e52067f2dd5bb97b77b7ba for user farid
+
+
+Commands REST
+POST http://localhost:8000/api-token-auth/
+Content-Type: application/json
+
+{
+  "username": "farid",
+  "password": "toulouse"
+}
+
+
+auth api
+https://wsvincent.com/django-rest-framework-authentication-tutorial/
+https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html#registration
+https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
+
+#setup cookie auth
+https://dev.to/rhymes/why-is-django-rest-framework-lying-to-me-3nan

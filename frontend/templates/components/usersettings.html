@@ -1,0 +1,89 @@
+<div class="columns">
+  <div class="column is-one-fifth">
+   <aside class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a href="{% url 'dashboard' %}"   ><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+      <li><a><i class="fas fa-envelope"></i> Messages <strong>(2)</strong></a></li>
+ <li>
+
+     <a id ="settings" href="{% url 'settings' %}" class="is-active" ><i class="fas fa-cogs"></i> Mes paramètres</a></li>
+
+  </ul>
+  <p class="menu-label">
+      AgriData
+  </p>
+  <p class="menu-label">
+      {{ api.user_profile.bio  }}
+  </p>
+
+  <ul class="menu-list">
+    <li>
+      <a> Gérer mes Parcelles</a>
+      <ul>
+      <li><a><i class="fas fa-plus-circle"></i> Créer une Parcelle</a></li>
+      </ul>
+    </li>
+    <li><a><i class="fas fa-cloud"></i> Météo agricole</a></li>
+    <li><a><i class="fas fa-life-ring"></i> Contact Support</a></li>
+  </ul>
+
+       <p class="menu-label">
+     <a href="{% url 'logout' %}?next=/" ><i class="fas fa-sign-out-alt"></i>   <strong>se déconnecter</strong> </a>
+</p>
+</aside>
+  </div>
+
+  <div class="column">
+{% for field in form %}
+    <div class="fieldWrapper">
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+        {% if field.help_text %}
+        <p class="help">{{ field.help_text|safe }}</p>
+        {% endif %}
+    </div>
+{% endfor %}
+       <form action='{% url 'newdevice' %}' method="post" >
+     <table>
+         {{ deviceForm.as_p }}
+         <tr>
+             <td>&nbsp;</td>
+             <td><button type="submit" class="save btn btn-default">Save</button></td>
+         </tr>
+     </table>
+     {% csrf_token %}
+     </form>
+
+
+      <table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="numéro d'appareil">numéro identifiant</abbr></th>
+      <th>Nom identifiant</th>
+      <th><abbr title="temps d'activité">actif depuis (heures)</abbr></th>
+      <th><abbr title="alarme?">Alarme </abbr></th>
+        <th><abbr title="version firmware">Version firmware</abbr></th>
+      <th><abbr title="Dernier contact">Date de Dernier Contact</abbr></th>
+      </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th><abbr title="numéro d'appareil">numéro identifiant</abbr></th>
+      <th>Nom identifiant</th>
+      <th><abbr title="temps d'activité">actif depuis (heures)</abbr></th>
+      <th><abbr title="alarme?">Alarme ?</abbr></th>
+      <th><abbr title="version firmware">Version firmware</abbr></th>
+      <th><abbr title="Dernier contact">Date de Dernier Contact</abbr></th>
+    </tr>
+  </tfoot>
+<tbody>
+    <tr>
+    </tr>
+</tbody>
+</table>
+  </div>
+
+</div>

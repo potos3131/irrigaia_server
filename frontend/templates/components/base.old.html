@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Irrigaia : a smart irrigation for a sustainable agriculture </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <!-- Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    {% load static %}
+    <script src="{% static 'ui.js' %}" type="text/javascript"></script>
+</head>
+<body id="page-top">
+
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="https://bulma.io">
+               <!-- <img src='{% static "logo_irrigaia_3.png" %}'> -->
+            </a>
+
+            <a class="navbar-item" href="#howitworks">
+                Comment ça marche ?
+            </a>
+            <a class="navbar-item" href="">
+                Contactez nous
+            </a>
+            <a class="navbar-item" href="#apropos">
+                A Propos...
+            </a>
+        </div>
+
+
+    </div>
+</nav>
+
+<div class="bg">
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+                <a class="button is-primary">
+                    <strong>Nouveau?</strong>
+                </a>
+                <button class="button is-light modal-button" data-target="#myModal" aria-haspopup="true">Se Connecter
+                </button>
+
+                </a>
+            </div>
+        </div>
+    </div>
+    <center><h1 class="title slogan"> irrigaia </h1></center>
+    <!-- <center><img src='{% static "logo_irrigaia_3.png"%}' width="300" height="100"></center>-->
+    <center><h1 class="title slogan"> smart irrigation </h1></center>
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <!-- Any other Bulma elements you want -->
+            {% include './Login.html' %}
+
+
+        </div>
+        <button class="modal-close is-large" id="closecross" aria-label="close"></button>
+    </div>
+
+
+</div>
+<div class="container">
+ <article class="tile is-child " id="section_howitworks">
+     <p class="title is-1 ">Comment ça marche ?</p>
+<hr class="divider light my-3">
+
+     <figure class="image">
+  <img src='{% static "irrigaia_schema.svg" %}' >
+          </figure></li>
+
+            </article>
+
+      </div>
+
+<div class="container">
+ <article class="tile is-child " id="section_howitworks">
+
+          <p class="title is-4 ">irrigaia est une vanne d'irrigation intelligente et autonome</p>
+     <hr class="divider light my-3">
+           <p > Il suffit d'un paramétrage pour spécifier le type de plante , et le système délivre délivre automatiquement la ressource en eau nécessaire. </p>
+           <p> Cette quantité d'eau à délivrer est réévaluée chaque jour , en fonction des conditions météo et des besoins des plantes</p>
+
+
+            </article>
+
+
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title">fonct</p>
+        <p class="subtitle">Aligned with the right tile</p>
+        <div class="content">
+          <!-- Content -->
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification is-success">
+      <div class="content">
+        <p class="title">Suivez nous !</p>
+        <p class="subtitle">With even more content</p>
+        <div class="content">
+          <!-- Content -->
+        </div>
+      </div>
+    </article>
+  </div>
+
+<div class="section_apropos" id="apropos">
+  <h2>Section 2</h2>
+  <p>Click on the link to see the "smooth" scrolling effect.</p>
+  <a href="#howitworks">Click Me to Smooth Scroll to Section 2 Below</a>
+  <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
+</div>
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child box">
+          <!-- Put any content you want -->
+        </article>
+        <article class="tile is-child box">
+          <!-- Put any content you want -->
+Mes tweets        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <!-- Put any content you want -->
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <!-- Put any content you want -->
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <!-- Put any content you want -->
+    </article>
+  </div>
+</div>
+
+</body>
+</html>

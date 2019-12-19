@@ -1,0 +1,6 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VERSION_NUM="0.0.1.e"
+VERSION_NAME="Red Mosquito"
+
+- AllAuth Authentication
+- UserProfile improvments
